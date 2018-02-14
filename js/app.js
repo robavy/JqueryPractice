@@ -28,9 +28,28 @@ $(document).ready(function(){
 		.find("p").eq(0).addClass('text-yellow').end()
 				  .eq(1).addClass('text-purple').end();
 
+	/*
+	.attr
+	.addClass
+	.removeClass
+	.css
+	.children
+	.eq
+	.find
+	end() 
+	*/
+
 	//7.- EVENTOS
 	$("#btn1").on("click",function(){
 		console.log("Click");
 		$(".modal").show('show');
+	});
+
+	$("#img-principal").on("mouseenter", function(){
+		$(this).attr("src","img/PICA.jpg");
+	});
+
+	$("#img-principal").on("mouseleave", function(){
+		$(this).attr("src", "http://placehold.it/400x300");
 	});
 });
