@@ -8,7 +8,7 @@ $(document).ready(function(){
 	//MODIFICACIONES AL SEGUNDO BLOQUE	
 	$(".col-md-6")
 		.find('p')
-		.html("<u>Roberto Garcia</u> es el mejor desarrollador web de México");
+		.html("<u>Sbeyond Code</u>");
 
 	$(".col-md-6 > ul li")
 		.eq(1)
@@ -38,6 +38,8 @@ $(document).ready(function(){
 	.find
 	end() 
 	*/
+	
+});
 
 	//7.- EVENTOS
 	$("#btn1").on("click",function(){
@@ -52,4 +54,23 @@ $(document).ready(function(){
 	$("#img-principal").on("mouseleave", function(){
 		$(this).attr("src", "http://placehold.it/400x300");
 	});
-});
+
+	$("#btn6").on("click", function(){
+		console.log("Click en el boton danger");
+	});
+	$("#linkUdemy").on("click", function(e){
+		e.preventDefault();
+		console.log("clicl en el link...");
+		
+		var link = $(this).attr("href");
+		console.log(link);
+		window.location = link;
+	});
+
+	/*
+	.on("click")
+	.on("mouseenter")
+	.on("mouseleave")
+	event.preventDefault
+	window.location = 
+	.this*/
