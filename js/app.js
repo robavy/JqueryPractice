@@ -6,22 +6,16 @@ $(document).ready(function(){
 	console.log($(".col-md-12").children("p")); //SELECCIONA LOS ELEMENTOS HIJOS DE UN DIV
 
 	//MODIFICACIONES AL SEGUNDO BLOQUE	
-	$(".col-md-6")
+	$("#txtDes")
 		.find('p')
 		.html("<u>Sbeyond Code</u>");
 
-	$(".col-md-6 > ul li")
-		.eq(1)
-		.css("color","red");
-	$(".col-md-6 > ul li")
-		.eq(0)
-		.css("color","yellow");
-	$(".col-md-6 > ul li")
-		.eq(2)
-		.css("color","green");
-	$(".col-md-6 > ul li")
-		.eq(3)
-		.css("color","purple");
+	$("#menuMin > ul li")
+		.eq(1).css("color","red").end()
+		.eq(0).css("color","yellow").end()
+		.eq(2).css("color","green").end()
+		.eq(3).css("color","purple").end();
+		
 
 	//EJERCICIO: AGREGAR ESTILOS A ELEMENTO DEL HTML CON JQUERY
 	$(".col-md-12")
@@ -41,7 +35,7 @@ $(document).ready(function(){
 	
 });
 
-	//7.- EVENTOS
+	//3.- EVENTOS
 	$("#btn1").on("click",function(){
 		console.log("Click");
 		$(".modal").show('show');
@@ -66,7 +60,6 @@ $(document).ready(function(){
 		console.log(link);
 		window.location = link;
 	});
-
 	/*
 	.on("click")
 	.on("mouseenter")
@@ -74,3 +67,21 @@ $(document).ready(function(){
 	event.preventDefault
 	window.location = 
 	.this*/
+
+	//4.- ACORDEONES
+
+	var dt = $("dt");
+	var dd = $("dd");
+	dd.hide();
+	dd.eq(0).show();
+	
+	$('dt').on("mouseenter", function(){
+		debugger
+		dd.slideUp(200);//hide
+		$(this)
+			.next()
+			.slideDown(200);//show
+	});
+	
+
+	

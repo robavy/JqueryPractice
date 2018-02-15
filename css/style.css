@@ -15,3 +15,20 @@
 #img-principal{
 	width: 300px;
 }
+
+dt{
+	cursor: default;
+	background-color: darkslategrey;
+	border-radius: 1px;
+	text-align: center;
+	position: relative;
+	font-weight: bold;
+	font-size: 15px;
+	height: 30px;
+}
+
+dd{
+	height: 30px;
+	background-color: aliceblue;
+	border-radius: 1px;
+}
